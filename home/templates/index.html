@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+<!-- {% load static %} -->
+
+{% block header %}
+    {% include 'component/header.html' %}
+{% endblock header %}
+
+{% block carousel %}
+    {% include 'component/carousel.html' %}
+{% endblock carousel %}
+
+{% block content %}
+        <div class="container mt-4 mb-5">
+            <h2 class="pt-2 text-center gave"> Our Products</h2>
+            <div class="row justify-content">
+              {% if category %}
+                {% for items in category %}
+                <div class="col-10 col-sm-10 col-md-6 col-lg-3">
+                  <div class="card">
+                    <img src="{{ items.img.url }}" class="card-img-top" alt=""/>
+                    <div class="class-body">
+                      <h4 class="card-title">{{items.name}}</h4>
+                      <p class="card-text">{{items.description}}</p>
+                      <a href="" class="btn btn-primary">Learn more</a>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              {% endif %}
+          </div>
+        </div>
+          
+          <div class="about text-center mt-3 mb-5">
+            <div class="container">
+                  <h2 class="pt-2 text-center gave" id="about"> about us</h2>
+                  <div class="row justify-content-center">
+                    <div class="col-12">
+                      <span>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                         Vero dolorum amet repudiandae commodi dolore atque inventore praesentium iure molestiae?
+                         <p class="pt-2">
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                          Earum molestiae magnam id harum iste officiis temporibus maiores necessitatibus repudiandae veniam iusto molestias doloremque dolore fugit,
+                           cumque deleniti natus eius animi?
+                         </p>
+                      </span>
+                      <div class="pt-4">
+                        <a href="" class="btn btn-outline-light w-25 p-3">About us</a>
+                      </div>
+                      
+          
+                    </div>
+                  </div>
+                </div>
+            </div>
+{% endblock content %}
+
+
+{% block contact %}
+    {% include 'component/contact.html' %}
+{% endblock contact %}
+
+{% block footer %}
+    {% include 'component/footer.html' %}
+{% endblock footer %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+  
+    {% block header %}
+      {% include 'component/header.html' %}
+    {% endblock header %}
+      <!-- navbar end -->
+      <!-- carousel -->
+      {% block carousel %}
+        {% include 'component/carousel.html' %}
+      {% endblock carousel %}
+    <!-- carousel end -->
+    {% block content %}
+        <div class="container nt-5 mb-5">
+          <h2 class="pt-2 pb-3 text-center gave">Login</h2>
+          <div class="row justify-content-center gy-3">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="details">
+                <img src="/img/martin-katler-Y4fKN-RlMV4-unsplash.jpg" class="fluid" alt="">
+              </div>
+              </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+              <div class="cform">
+                <form action="">
+                  <div class="mb-3">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="mb-3">
+                    <label for="">Username</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div>
+                    <button type="sumbit" class="btm contact-btn">Login</button>
+                    <a href="/signup.htmlsignin.html" class="btn register-btn ms-3">Register</a>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+   {% endblock content %}
+
+   {% block footer %}
+        {% include 'component/footer.html' %}
+   {% endblock footer %}

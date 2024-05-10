@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block header %}
+    {% include 'component/header.html' %}
+{% endblock header %}
+
+{% block carousel %}
+    {% include 'component/carousel2.html' %}
+{% endblock carousel %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h2 class="pt-2 pb-3 text-center gave">Featured products</h2>
+        <div class="row justify-content-center gy-3">
+          {% if product %}
+            {% for items in product %}
+            <div class="col-10 col-sm-10 col-md-6 col-lg-3 col-xl-3">
+              <div class="card jagun">
+                  <img src="{{items.img.url}}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">{{items.name}}</h5>
+                    <p class="card-text">{{items.description}}</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>
+            </div>
+            {% endfor %}
+          {% endif %}
+          </div>
+        </div>
+</div>
+{% endblock content %}
